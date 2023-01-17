@@ -1,0 +1,65 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <title>Mensagem Oculta</title>
+    </head>
+    <body>
+        <main>
+            <h1>Mensagem Oculta</h1>
+    
+            <div id="formulario">
+                    <form action="">
+                        <fieldset>
+                            <div class="divInputs">
+                                <span class="subTitulos">Escreva a mensagem que deseja codificar ou decodificar</span>
+                                <label>
+                                    <input type="text" id="entrada" class="inputEntrada" maxlength=300 >
+                                </label>
+                            </div>
+
+                            <div id="checksBox">
+                                <label class="opcoesCodific">
+                                    <input type="radio" name="checked" id="cifraCesar" onclick="ativa()">
+                                    <label type="">Cifra de Cesar</label>
+                                </label>
+                                <label class="opcoesCodific">
+                                    <input type="radio" id="base64" name="checked">
+                                    <label type="">Base64</label>
+                                </label>
+                            </div>
+
+                            <div class="divInputs">
+                                <label>
+                                    <span class="subTitulos">Escolha um número para deslocamento</span>
+                                    <input type="number" name="numero" id="num" oninput="Num()" min="0" class="inputs">
+                                </label>
+                            </div>
+
+                            <div id="divBotoes">
+                                <label for="">
+                                    <input type="button" value="Codificar">
+                                    <input type="button" value="Decodificar">
+                                </label>
+                            </div>
+                            <div class="divInputs">
+                                <textarea name="saida" id="saida" disabled=""></textarea>
+                            </div>
+                        </fieldset>
+                    </form>
+            </div>
+        </main>
+
+        <!-- <section>
+            <div id="infoUso">
+                <h2>Informação para uso</h2>
+                <p></p>
+            </div>
+        </section> -->
+
+        <script src="/assets/js/script.js"></script>
+    </body>
+    </html>

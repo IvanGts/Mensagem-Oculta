@@ -1,0 +1,73 @@
+/* configuração geral */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    }
+    
+    html, body{
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/img/background.jpg");
+    }
+
+    body{
+        display: flex;
+        justify-content: center;
+    }
+/* <<<<<<<<<<<< */
+h1{
+    text-align: center;
+    padding: 20px;
+}
+
+main{ 
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+    height: auto;
+}
+
+/* estilização div formulario */
+#formulario{
+    padding: 10px;
+    border-radius: 5px;
+
+    align-self: center;
+    background: #A6A6A6;
+}
+
+fieldset{
+    background: #ECECEC;
+    padding: 20px;
+}
+
+.subTitulos{
+    font-size: 20px;
+}
+
+.divInputs{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputEntrada{
+    width: 300px;
+    height: 50px;
+}
+/* estilização checksbox 'Cifra de Cesar' e 'Base64' */
+#checksBox{
+    display: flex;
+}
+
+.opcoesCodific{
+    padding: 10px;
+}
+
+textarea{
+    font-size: 20px;
+    height: 150px;
+}
+/* <<<<<<<<<<<< */
