@@ -47,27 +47,40 @@ fieldset{
     font-size: 20px;
 }
 
-.divInputs{
-    padding: 5px;
+#divEntrada{
     display: flex;
     flex-direction: column;
 }
 
 .inputEntrada{
-    width: 300px;
-    height: 50px;
+    width: 485px;
+    height: 40px;
+    margin-top: 5px;
 }
+
 /* estilização checksbox 'Cifra de Cesar' e 'Base64' */
 #checksBox{
     display: flex;
+    justify-content: center;
+
+}
+
+.displayNone{
+    display: none;
 }
 
 .opcoesCodific{
     padding: 10px;
 }
 
+#divBotoes{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
 textarea{
-    font-size: 20px;
+    width: 485px;
     height: 150px;
+    font-size: 20px;
 }
 /* <<<<<<<<<<<< */
