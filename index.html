@@ -5,6 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/assets/css/style.css">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" 
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" 
+        crossorigin="anonymous"></script>
         <title>Mensagem Oculta</title>
     </head>
     <body>
@@ -12,41 +15,43 @@
             <h1>Mensagem Oculta</h1>
     
             <div id="formulario">
-                    <form name="form">
-                        <fieldset>
-                            <div id="divEntrada">
-                                <span class="subTitulos">Escreva a mensagem que deseja codificar ou decodificar</span>
-                                <label>
-                                    <input type="text" id="entrada" class="inputEntrada" maxlength=300 >
-                                </label>
-                            </div>
+                <form name="form">
+                    <fieldset>
+                        <div id="divEntrada">
+                            <span class="subTitulos">Escreva a mensagem que deseja codificar ou decodificar</span>
+                            <label>
+                                <input type="text" id="entrada" class="inputEntrada" placeholder="" maxlength=300 >
+                            </label>
+                        </div>
 
-                            <div id="checksBox">
-                                <label class="opcoesCodific">
-                                    <input type="radio" id="cifraCesar" name="checked" onfocus="ativaCifradeCesar()">
-                                    <label type="">Cifra de Cesar</label>
-                                </label>
-                                <label class="opcoesCodific">
-                                    <input type="radio" id="base64" name="checked" onfocus="ativaBase64()">
-                                    <label type="">Base64</label>
-                                </label>
-                            </div>  
+                        <div id="checksBox">
+                            <label class="opcoesCodific">
+                                <input type="radio" id="cifraCesar" name="checked" onclick="checkCC()">
+                                <label type="">Cifra de Cesar</label>
+                            </label>
+                            <label class="opcoesCodific">
+                                <input type="radio" id="base64" name="checked" onclick="checkB64()">
+                                <label type="">Base64</label>
+                            </label>
+                        </div>  
 
-                            <div id="divCifraCesar">
-                            
-                            </div>
+                        <div id="divCifraCesar">
+                        
+                        </div>
 
-                            <div id="divBotoes">
-                                <label>
-                                    <input type="button" value="Codificar">
-                                    <input type="button" value="Decodificar">
-                                </label>
-                            </div>
-                            <div>
-                                <textarea name="saida" id="saida" disabled=""></textarea>
-                            </div>
-                        </fieldset>
-                    </form>
+                        <div id="divBotoes">
+                            <label>
+                                <input type="button" value="Codificar">
+                                <input type="button" value="Decodificar">
+                            </label>
+                        </div>
+                    
+                        <div>
+                            <textarea name="saida" id="saida" disabled=""></textarea>
+                        </div>
+
+                    </fieldset>
+                </form>
             </div>
         </main>
 
@@ -57,6 +62,6 @@
             </div>
         </section> -->
 
-        <script src="/assets/js/script.js"></script>
+        <script src="./assets/js/script.js"></script>
     </body>
     </html>

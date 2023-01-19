@@ -1,59 +1,52 @@
-/* <div class="divInputs">
-    <span class="subTitulos">Escolha um número para deslocamento</span>
-
-    <input type="number" name="numero" id="num" oninput="Num()" min="0" class="inputs">
-</div> */
-
-
 const inputEntrada = document.querySelector('#entrada')
 const checkCifraCesar = document.querySelector('#cifraCesar')
 const checkBase64 = document.querySelector('#base64')
 
-function escolheCodificacao(){
+// escolheCodificacao()
+// função ativada quando o radio estiver checked ou seja, a o cifra de cesar selecionado pelo usuário
+function checkCC(){ 
     if(checkCifraCesar.checked){
-        ativaCifradeCesar()
-    }else if(checkBase64.checked){
-        ativaBase64()
+        if($(".labelAcresc").is(":visible")){ // verificando se o elemento está visivel
+            noneCifraCesar() // retira toda label de dentro da div cifra de cesar
+        }else{
+            criaBloco()
+        }
     }
+    // aqui será passada a função que ativa a codificação e decodificação de cifra de cesar
 }
 
-escolheCodificacao()
 
-function ativaCifradeCesar(){
-    if(checkCifraCesar.checked){
+function checkB64(){
+    if($(".labelAcresc").is(":visible")){ // verificando se o elemento está visivel
         noneCifraCesar() // retira toda label de dentro da div cifra de cesar
-    }else{
-        criaBloco()
     }
+    ativaBase64()
 }
 
 function ativaBase64(){
-    if(checkCifraCesar.checked){
-        noneCifraCesar()
-    }else{
-        //executa bloco de códificação ou decodificação de acordo com o selecionado
-    }
+    console.log('funfando');
 }
-
 
 function criaBloco(){
     var container = document.querySelector('#divCifraCesar')
-    var label = document.createElement('label')     // 
-    label.setAttribute('class', 'labelAcresc')      // 
-    var spanSubTit = document.createElement('span')     // 
-    spanSubTit.setAttribute('class', 'subTitulos')
+    var label = document.createElement('label')
+    var spanSubTit = document.createElement('span') 
     var subTitulo = document.createTextNode('Escolha um número para deslocamento.')
-    spanSubTit.appendChild(subTitulo)
-
     var inputAcrescenta = document.createElement('input')
-    inputAcrescenta.setAttribute('class', 'inputAcresc')
-    inputAcrescenta.setAttribute('id', 'acrescenta')
 
     container.appendChild(label)
+    label.appendChild(inputAcrescenta)
     label.appendChild(spanSubTit)
     spanSubTit.appendChild(subTitulo)
-    label.appendChild(inputAcrescenta)
+    label.setAttribute('class', 'labelAcresc')       
+    spanSubTit.setAttribute('class', 'subTitulos')
+    inputAcrescenta.setAttribute('class', 'inputAcresc')
+    inputAcrescenta.setAttribute('type', 'number')
+    inputAcrescenta.setAttribute('id', 'acrescenta')
+    inputAcrescenta.setAttribute('min', '0')
+    inputAcrescenta.setAttribute('placeholder', 'Ex: 1,2,3...')
 } // função que cria o bloco de incremento que ativada quando clica em Cifra de Cesar
+
 
 function noneCifraCesar(){
     var cifraCesarNone = document.querySelector('.labelAcresc')
