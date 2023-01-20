@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
         <script src="https://code.jquery.com/jquery-3.6.3.min.js" 
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" 
         crossorigin="anonymous"></script>
@@ -23,26 +23,37 @@
                                 <input type="text" id="entrada" class="inputEntrada" placeholder="" maxlength=300 >
                             </label>
                         </div>
-
                         <div id="checksBox">
-                            <label class="opcoesCodific">
-                                <input type="radio" id="cifraCesar" name="checked" onclick="checkCC()">
-                                <label type="">Cifra de Cesar</label>
-                            </label>
-                            <label class="opcoesCodific">
-                                <input type="radio" id="base64" name="checked" onclick="checkB64()">
-                                <label type="">Base64</label>
-                            </label>
-                        </div>  
-
-                        <div id="divCifraCesar">
+                            <div class="opcoesCodific">
+                                <label for="cifraCesar">
+                                    <input type="radio" class="checEst1" id="cifraCesar" name="checked" onclick="checkCC()">
+                                    <div class="styleCheck">
+                                        <span></span>
+                                    </div>
+                                    <span>Cifra de Cesar</span>
+                                </label>
+                            </div>
+            
+                            <div class="opcoesCodific">
+                                <label for="base64">
+                                    <input type="radio" class="checEst1" id="base64" name="checked" onclick="checkB64()">
+                                    <div class="styleCheck">
+                                        <span></span>
+                                    </div>
+                                    <span>Base64</span>
+                                </label>
+                            </div> 
+                            <div id="divCifraCesar">
                         
+                            </div>
                         </div>
 
                         <div id="divBotoes">
                             <label>
-                                <input type="button" value="Codificar">
-                                <input type="button" value="Decodificar">
+                                <input type="button" id="codificar" value="Codificar">
+                            </label>
+                            <label for="">
+                                <input type="button" id="decodificar" value="Decodificar">
                             </label>
                         </div>
                     
@@ -61,7 +72,7 @@
                 <p></p>
             </div>
         </section> -->
-
+        <script src="./assets/js/codificacao.js"></script>
         <script src="./assets/js/script.js"></script>
     </body>
     </html>

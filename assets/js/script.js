@@ -4,6 +4,9 @@ const checkBase64 = document.querySelector('#base64')
 
 // escolheCodificacao()
 // função ativada quando o radio estiver checked ou seja, a o cifra de cesar selecionado pelo usuário
+
+
+
 function checkCC(){ 
     if(checkCifraCesar.checked){
         if($(".labelAcresc").is(":visible")){ // verificando se o elemento está visivel
@@ -22,6 +25,7 @@ function checkB64(){
     }
     ativaBase64()
 }
+
 
 function ativaBase64(){
     console.log('funfando');
@@ -52,3 +56,5 @@ function noneCifraCesar(){
     var cifraCesarNone = document.querySelector('.labelAcresc')
     cifraCesarNone.setAttribute('class', 'displayNone')
 }// função que tira a o bloco
+
+

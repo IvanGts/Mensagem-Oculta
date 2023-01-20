@@ -19,6 +19,8 @@
 h1{
     text-align: center;
     padding: 20px;
+    animation-name: entraTit;
+    animation-duration: 3s;
 }
 
 main{ 
@@ -36,11 +38,15 @@ main{
 
     align-self: center;
     background: #A6A6A6;
+    animation-name: entraForm;
+    animation-duration: 1s;
 }
 
 fieldset{
     background: #ECECEC;
-    padding: 20px;
+    padding: 15px;
+    width: 650px;
+    height: 360px;
 }
 
 .subTitulos{
@@ -53,7 +59,7 @@ fieldset{
 }
 
 .inputEntrada{
-    width: 485px;
+    width: 640px;
     height: 40px;
     margin-top: 5px;
 }
@@ -61,8 +67,55 @@ fieldset{
 /* estilização checksbox 'Cifra de Cesar' e 'Base64' */
 #checksBox{
     display: flex;
-    justify-content: center;
+    justify-content: ;
+    padding: 15px;
+    height: 50px;
+}
 
+input[type='radio']{
+    display: none;
+}
+
+.opcoesCodific{
+    margin-right: 20px;
+}
+
+.opcoesCodific label{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.styleCheck{
+    border: solid 2px #A6A6A6;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+
+    background: #ECECEC;
+    display: grid;
+    place-content: center;
+}
+
+.styleCheck, span{
+    transition: 0.6s ease;
+    color:#000;
+}
+
+.styleCheck span{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #A6A6A6;
+    border-radius: 50%;
+}
+
+input[type='radio']:checked + .styleCheck {
+    border-color: #000;
+  }
+  
+input[type='radio']:checked + .styleCheck span {
+    background: #000;
 }
 
 .displayNone{
@@ -91,13 +144,42 @@ fieldset{
     justify-content: center;
     padding: 10px;
 }
+
+#codificar, #decodificar{
+    margin: 5px;
+}
+
 textarea{
-    width: 485px;
+    width: 640px;
     height: 150px;
-    max-width: 485px;
+    max-width: 640px;
     max-height: 150px;
-    min-width: 485px;
-    min-height: 150px;
     font-size: 20px;
 }
 /* <<<<<<<<<<<< */
+
+/* animações do formulário */
+
+@keyframes entraForm{
+    from{
+        opacity: 0;
+        transform: translateX(-35%);
+    }to{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes entraTit{
+    from{
+        opacity: 0;
+        transform: translateX(-35%);
+    }to{
+        opacity: 1;
+        transform: translate(0%);
+    }
+}
+
+/* animação dos inputs radios */
+
+.checkEst1{}
