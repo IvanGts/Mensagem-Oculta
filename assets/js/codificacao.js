@@ -1,9 +1,4 @@
-const checkCodificar = document.querySelector('#codificar')
-const checkDecodificar = document.querySelector('#decodificar')
-const deslocamento = document.querySelector('#incremento'.value)
-const frase = document.querySelector('#entrada')
-
-$('#submit').on('click', () => {
+$('#submit').on('click', () => {        //fução que verifica qual foi selecionado para execução e impressão a codificação ou decodifiiação
     let entrada = $('#entrada').val()
     let saida = $('#saida')
     let deslocamento = Number($('#incremento').val())
@@ -28,7 +23,7 @@ $('#submit').on('click', () => {
     }
 })
 
-$('#opcoesMetd').on('change', ()=> {
+$('#opcoesMetd').on('change', ()=> {        //função que cria a caixa de incremento e retira quando não selecionado para cifra de cesar
     let opcoesMetodos = $('#opcoesMetd option:selected').val()
     if(opcoesMetodos == 'cifraCesar'){
         $('#divCifraCesar').append('<input type="number" id="incremento" min=1 max=25>')
@@ -40,16 +35,16 @@ $('#opcoesMetd').on('change', ()=> {
 })
 
 
-const codificaBase64 = (frase) => btoa(frase)
+const codificaBase64 = (frase) => btoa(frase)       //função que codifica em bas64
 
-const decodificaBase64 = (frase) => atob(frase)
+const decodificaBase64 = (frase) => atob(frase)     //função que decodifica em bas64
 
-const codificaCifraCesar = (frase, deslocamento) => {
+const codificaCifraCesar = (frase, deslocamento) => {       //função que codifica em cifra de cesar
     let fraseResult = ''
     for(let i =0; i < frase.length; i++){
-        let ascii = frase.charCodeAt(i)
+        let ascii = frase.charCodeAt(i)     //pega o alfabeto na tabela ascii de acordo com o valor do i
         if(ascii >= 65 && ascii <= 90){
-            ascii += deslocamento
+            ascii += deslocamento 
 
             if(ascii > 90){
                 ascii = ascii - 90 + 64
@@ -66,7 +61,7 @@ const codificaCifraCesar = (frase, deslocamento) => {
     return fraseResult
 }
 
-const decodificaCifraCesar = (frase, deslocamento) => {
+const decodificaCifraCesar = (frase, deslocamento) => {     //função que decodifica em cifra de cesar
     let fraseResult = ''
     for(let i =0; i < frase.length; i++){
         let ascii = frase.charCodeAt(i)
