@@ -15,23 +15,27 @@
         display: flex;
         justify-content: center;
     }
+
+    h1{
+        text-align: center;
+        padding: 20px;
+        animation-name: entraTit;
+        animation-duration: 3s;
+    }
+    
+    main{ 
+        display: flex;
+        justify-content: center;
+    
+        flex-direction: column;
+        height: auto;
+    }
 /* <<<<<<<<<<<< */
-h1{
-    text-align: center;
-    padding: 20px;
-    animation-name: entraTit;
-    animation-duration: 3s;
-}
 
-main{ 
-    display: flex;
-    justify-content: center;
 
-    flex-direction: column;
-    height: auto;
-}
 
 /* estilização div formulario */
+
 #formulario{
     padding: 10px;
     border-radius: 5px;
@@ -46,12 +50,16 @@ fieldset{
     background: #ECECEC;
     padding: 15px;
     width: 650px;
-    height: 360px;
+    height: auto;
 }
 
 .subTitulos{
     font-size: 20px;
 }
+/* >>>>>>>>>>>>>>>>>>>>> */
+
+
+/* estilização da entrada de texto do usuário */
 
 #divEntrada{
     display: flex;
@@ -63,35 +71,86 @@ fieldset{
     height: 40px;
     margin-top: 5px;
 }
+/* >>>>>>>>>>>>>>>>>>>>> */
 
-/* estilização checksbox 'Cifra de Cesar' e 'Base64' */
-#checksBox{
+
+#divMetodo{
     display: flex;
-    justify-content: ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+select{
+    display: flex;
+    align-items: center;
+}
+
+.styleOption:hover{
+    background: #000;
+    color: #fafafa;
+}
+
+#divCifraCesar{
+    margin: 10px;
+    height: 30px;
+}
+
+/* estilização do input de incremento */
+
+
+.labelAcresc{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    animation-name: entraSuave;
+    animation-duration: 1s;
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>>> */
+
+/* estilização do container de id checksBox */
+#divRadio{
+    display: flex;
+    justify-content: space-around;
+}
+
+.checksBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
     padding: 15px;
     height: 50px;
+}
+
+#checksbox label{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.lablsCodific{
+    margin: 10px;
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
 }
 
 input[type='radio']{
     display: none;
 }
 
-.opcoesCodific{
-    margin-right: 20px;
-}
-
-.opcoesCodific label{
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
-}
-
 .styleCheck{
     border: solid 2px #A6A6A6;
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-
+    
     background: #ECECEC;
     display: grid;
     place-content: center;
@@ -104,10 +163,11 @@ input[type='radio']{
 
 .styleCheck span{
     content: '';
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     background: #A6A6A6;
     border-radius: 50%;
+    display: flex;
 }
 
 input[type='radio']:checked + .styleCheck {
@@ -118,36 +178,7 @@ input[type='radio']:checked + .styleCheck span {
     background: #000;
 }
 
-.displayNone{
-    display: none;
-}
-
-.opcoesCodific{
-    padding: 10px;
-}
-
-.labelAcresc{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.inputAcresc{
-    width: 80px;
-    padding: 3px;
-    margin-top: 5px;    
-}
-
-#divBotoes{
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-}
-
-#codificar, #decodificar{
-    margin: 5px;
-}
+/* >>>>>>>>>>>>>>>>>>>>> */
 
 textarea{
     width: 640px;
@@ -156,7 +187,28 @@ textarea{
     max-height: 150px;
     font-size: 20px;
 }
-/* <<<<<<<<<<<< */
+
+/* estilização do botão de imprimir a coidificação */
+#divButton{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button{
+    padding: 7px;
+    box-shadow: 20px, #000;
+    width: px;
+    height: 35px;
+    border-radius: 10px;
+}
+
+button:hover{
+    background: #A6A6A6;
+    opacity: 0.5;
+    color: #000;
+}
+
 
 /* animações do formulário */
 
@@ -180,6 +232,23 @@ textarea{
     }
 }
 
-/* animação dos inputs radios */
+@keyframes entraSuave{
+    from{
+        opacity: 0;
+        transform: scale(0.99.9);
+    }to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
-.checkEst1{}
+@keyframes saiSuave{
+    from{
+        opacity: 1;
+        transform: scale(1);
+    }to{
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+/* <<<<<<<<<<<< */

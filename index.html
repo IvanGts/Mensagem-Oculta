@@ -23,44 +23,51 @@
                                 <input type="text" id="entrada" class="inputEntrada" placeholder="" maxlength=300 >
                             </label>
                         </div>
-                        <div id="checksBox">
-                            <div class="opcoesCodific">
-                                <label for="cifraCesar">
-                                    <input type="radio" class="checEst1" id="cifraCesar" name="checked" onclick="checkCC()">
-                                    <div class="styleCheck">
-                                        <span></span>
-                                    </div>
-                                    <span>Cifra de Cesar</span>
-                                </label>
-                            </div>
-            
-                            <div class="opcoesCodific">
-                                <label for="base64">
-                                    <input type="radio" class="checEst1" id="base64" name="checked" onclick="checkB64()">
-                                    <div class="styleCheck">
-                                        <span></span>
-                                    </div>
-                                    <span>Base64</span>
-                                </label>
-                            </div> 
+                        <div id="divMetodo">
+                            
+                            <select name="" id="opcoesMetd">
+                                <option id="null" value="">Selecione</option>
+
+                                <option id="cifraCesar" value="cifraCesar">Cifra de César</option>
+                            
+                                <option id="base64" value="base64">base64</option>
+                            </select>
+
                             <div id="divCifraCesar">
-                        
+                                <span class="textSelecione">Escolha um método acima</span>
                             </div>
+
                         </div>
 
-                        <div id="divBotoes">
-                            <label>
-                                <input type="button" id="codificar" value="Codificar">
-                            </label>
-                            <label for="">
-                                <input type="button" id="decodificar" value="Decodificar">
-                            </label>
+                        <div id="divRadio">
+                            
+                            <div class="checksBox">
+                                <label for="codificar"class="lablsCodific">
+                                    <input type="radio" id="codificar" name="radio" class="checEst1" value="codificar">
+                                    <div class="styleCheck">
+                                        <span></span>
+                                    </div>
+                                    <span>Codificar</span>
+                                </label>
+                                <label for="decodificar" class="lablsCodific">
+                                    <input type="radio" id="decodificar" name="radio" class="checEst1" value="decodificar">
+                                    <div class="styleCheck">
+                                        <span></span>
+                                    </div>
+                                    <span>Decoficiar</span>
+                                </label>
+                            </div>
+
+                            <div id="divButton">
+                                <button type="submit" id="submit">IMPRIMIR</button>
+                            </div>
+
                         </div>
-                    
+
                         <div>
                             <textarea name="saida" id="saida" disabled=""></textarea>
                         </div>
-
+                        
                     </fieldset>
                 </form>
             </div>
