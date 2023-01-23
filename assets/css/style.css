@@ -205,6 +205,7 @@ button{
 
 button:hover{
     background: #A6A6A6;
+    cursor: pointer;
     opacity: 0.5;
     color: #000;
 }

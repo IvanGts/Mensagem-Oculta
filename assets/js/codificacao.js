@@ -32,6 +32,8 @@ $('#opcoesMetd').on('change', ()=> {        //função que cria a caixa de incre
         $('#incremento').remove()
         $('.textSelecione').show()   
     }
+
+
 })
 
 
@@ -86,7 +88,6 @@ const decodificaCifraCesar = (frase, deslocamento) => {     //função que decod
 $('form').on('submit', function(event){     // tira o comportamento/recarregamento padrão da página quando o submit é acionado
     event.preventDefault()
 })
-
 
 
 
